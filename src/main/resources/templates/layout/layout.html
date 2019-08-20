@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+<meta charset="UTF-8" />
+<title
+	th:text="'Spring Boot: MVC + Thymeleaf + Data JPA - ' + ${titulo}"></title>
+
+<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+
+</head>
+
+<body>
+
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Spring Boot</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{/listar}">Clientes</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+
+	<div class="container"></div>
+
+	<footer th:fragment="footer" class="container">
+		<hr />
+		<img th:src="@{/images/spring-logo.png}" />
+		<p>
+			Powered by <a href="https://projects.spring.io/spring-boot/">Spring
+				Boot</a>
+		</p>
+		<p>
+			Este proyecto fue desarrollado en IDE Eclipse + Spring Plugins (STS
+			Spring Tool), Fernando Alvarado. <br /> &copy; 2019, Todos los
+			derechos reservados
+		</p>
+
+	</footer>
+
+	<div th:fragment="script">
+		<script src="@{/bootstrap/js/jquery-3.4.1.min.js}"></script>
+		<script src="@{/bootstrap/js/popper.min.js}"></script>
+		<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	</div>
+
+</body>
+
+</html>
